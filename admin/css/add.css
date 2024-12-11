@@ -1,0 +1,84 @@
+/*-------------- HEADER------------ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-bottom: 30px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: all 0.1s;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--hover-color);
+  scale: 1.03;
+}
+
+/*-------------- MAIN ------------ */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+main form {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: var(--border-radius);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main form div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+main form label {
+  font-weight: 600;
+}
+
+main form input {
+  padding: 10px;
+
+  border-radius: var(--border-radius);
+  border: solid 1px black;
+}
+
+main form button {
+  padding: 8px;
+  border-radius: var(--border-radius);
+  border: solid 1px var(--hover-color);
+  background-color: var(--primary-color);
+
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+
+  transition: all 0.2s ease-in-out;
+}
+
+main form button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+@media screen and (max-width: 400px) {
+  main form div input {
+    width: 250px;
+  }
+}

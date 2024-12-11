@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url(../css/fontawesome-free-web/css/all.css);
+
+/*------ GLOBAIS UTILIZADAS ----- */
+
+:root {
+  --border-radius: 5px;
+  --primary-color: #ff6b00;
+  --hover-color: #cd5500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  padding: 15px 150px;
+}
+
+/*-
+LONG LINK = por escrito
+SHORT LINK = icone awesome
+ */
+ 
+.long-link,
+.short-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: all 0.1s;
+  text-decoration: none;
+}
+
+.long-link:hover {
+  color: var(--hover-color);
+  scale: 1.03;
+}
+
+.short-link {
+  display: none;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.logo {
+  width: 115px;
+  aspect-ratio: 1/1;
+}
+
+/*------------ RESPONSIVIDADE DOS ELEMENTOS ---------- */
+
+@media screen and (max-width: 960px) {
+  body {
+    padding: 15px 75px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .short-link {
+    display: block;
+  }
+
+  .long-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 15px 30px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+}

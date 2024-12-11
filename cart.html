@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Carrinho</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/globals.css" />
+    <script defer src="./js/cart.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <a class="long-link" href="./index.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Voltar para a loja</span>
+        </a>
+
+        <a class="short-link" href="./index.html">
+          <i class="fa-solid fa-shop"></i>
+        </a>
+      </div>
+
+      <a href="./index.html">
+        <img src="images/logo.jpeg" class="logo" alt="logo" />
+      </a>
+
+      <div>
+        <a class="long-link" href="./finish.html">
+          <span>Finalizar Compra</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <a class="short-link" href="./finish.html">
+          <i class="fa-solid fa-credit-card"></i>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="cards" id="cards"></div>
+      <div class="totals">
+        <span class="title">Total do Carrinho</span>
+        <span class="total-cart" id="cart-total">R$ 19.874,97</span>
+      </div>
+    </main>
+  </body>
+</html>

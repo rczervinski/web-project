@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>CZP Digital Solutions</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/add.css" />
+    <link rel="stylesheet" href="../css/globals.css" />
+    <script defer src="./js/add.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="../images/logo.jpeg" alt="logo" class="logo" />
+
+      <a href="./index.html" class="link">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Voltar</span>
+      </a>
+    </header>
+    <main>
+      <h1>Adicionar um produto</h1>
+      <form>
+        <div>
+          <label>Nome</label>
+          <input type="text" placeholder="Iphone X Plus Max..." id="name" />
+        </div>
+        <div>
+          <label>Preço</label>
+          <input type="text" placeholder="1999.99" id="price" />
+        </div>
+        <div>
+          <label>Imagem (.png)</label>
+          <input type="file" id="img" />
+        </div>
+        <button type="button" onclick="addProduct()">
+          <span>Adicionar</span>
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

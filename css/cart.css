@@ -1,0 +1,224 @@
+/*------------ HEADER ---------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*------------ CARDS CARRINHO ---------- */
+main {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  padding: 20px;
+
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*------ CARD INFO------- */
+.card .product-info {
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  gap: 15px;
+}
+
+.card .product-info img {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+
+.card .product-info .data {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+
+  font-size: 18px;
+}
+
+.card .product-info .data .name {
+  font-weight: 500;
+}
+
+.card .product-info .data .price {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/*------ CARD QUANTIDADE------- */
+.card .quantity-info {
+  height: 100%;
+  width: 30%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card .quantity-info .total {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card .quantity-info .buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card .quantity-info .buttons button {
+  border: solid 1px var(--primary-color);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  padding: 4px;
+
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: bold;
+
+  transition: all 0.1s ease-in-out;
+}
+
+.card .quantity-info .buttons button:hover {
+  border: solid 1px var(--hover-color);
+  color: white;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.card .quantity-info .buttons span {
+  font-weight: 500;
+}
+
+.card .close:hover {
+  color: var(--hover-color);
+  scale: 1.2;
+  cursor: pointer;
+}
+
+.card .close {
+  height: 100%;
+  width: 5%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*-------------- TOTAL DO CARRINHO ------------ */
+
+.totals,
+.card {
+  border: solid 1px black;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+.totals {
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.totals .title {
+  font-weight: 500;
+}
+
+.totals .total-cart {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+
+/*-------------- RESPONSIVIDADE DA PAG. CARRINHO------------ */
+@media screen and (max-width: 1000px) {
+  .totals {
+    font-size: 18px;
+  }
+
+  .card .product-info .data .name {
+    font-size: 14px;
+  }
+
+  .card .product-info img {
+    width: 80px;
+  }
+
+  .card .quantity-info .total {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .totals {
+    height: 60px;
+
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card .product-info img {
+    display: none;
+  }
+
+  .card .product-info {
+    width: 40%;
+  }
+
+  .card .quantity-info {
+    width: 44%;
+  }
+
+  .card .product-info .data .price {
+    font-size: 14px;
+  }
+
+  .card .quantity-info .total {
+    font-size: 14px;
+  }
+
+  .card .quantity-info .buttons button {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .card .close {
+    width: 1%;
+  }
+
+  .totals {
+    gap: 10px;
+    font-size: 16px;
+  }
+}

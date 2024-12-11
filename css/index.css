@@ -1,0 +1,135 @@
+/*------------ HEADER---------- */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+header div input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  border: 1px solid black;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*------------ CARDS ---------- */
+.cards {
+  margin-top: 30px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.card {
+  width: 200px;
+  aspect-ratio: 2/3;
+  border: solid black 1px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+.card-img {
+  width: 100%;
+  height: 63%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-img img {
+  height: 90%;
+  max-width: 100%;
+}
+
+.card-info {
+  width: 100%;
+  height: 25%;
+
+  border-top: solid 1px black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--primary-color);
+}
+
+.card-info .name {
+  font-size: 16px;
+}
+
+.card-info .price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card button {
+  width: 100%;
+  height: 12%;
+
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid black;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.card button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+/*------------ RESPONSIVIDADE PAG. PRINCIPAL ---------- */
+
+@media screen and (max-width: 960px) {
+  header div {
+    gap: 30px;
+  }
+
+  header div input {
+    width: 130px;
+  }
+
+  .cards {
+    justify-content: auto;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .card {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header div {
+    gap: 10px;
+  }
+}

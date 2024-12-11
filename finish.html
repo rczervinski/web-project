@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Carrinho</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/finish.css" />
+    <link rel="stylesheet" href="css/globals.css" />
+    <script defer src="./js/finish.js"></script>
+  </head>
+  <body>
+    <header> 
+      <div class="cart-link">
+        <a class="long-link" href="./cart.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          <span>Voltar para o carrinho</span>
+        </a>
+
+        <a class="short-link" href="./cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+
+      <a href="./index.html">
+        <img src="images/logo.jpeg" class="logo" alt="logo" />
+      </a>
+
+      <div class="totals">
+        <span class="title">Total</span>
+        <span class="total-cart" id="cart-total">R$ 19.874,97</span>
+      </div>
+    </header>
+
+    <main>
+      <h1>Seus produtos:</h1>
+      <div class="cards" id="cards"></div>
+      <h1>Como deseja finalizar sua compra?</h1>
+      <div class="buttons">
+        <button id="qrcode-button" onclick="selectOption('qrcode')">
+          <i class="fa-solid fa-qrcode"></i>
+          <span>Pix</span>
+        </button>
+        <button id="card-button" onclick="selectOption('card')">
+          <i class="fa-solid fa-credit-card"></i>
+          <span>Cartão</span>
+        </button>
+      </div>
+      <div class="qrcode-option" id="qrcode-option">
+        <h1>Escaneie o QR Code ou copie o código para pagar.</h1>
+        <input
+          type="text"
+          value="00020126400014br.gov.bcb.pix0118pbcz2005@gmail.com5204000053039865802BR5924Marineide da Aparecida S6008Brasilia62080504mpda630494C1"
+          disabled
+        />
+        <img src="./images/qrcode.png" alt="qrcode" class="active" />
+        <button type="button" onclick="finish()">Finalizar</button>
+      </div>
+      <div class="card-option" id="card-option">
+        <h1>Preencha o formulário com seus dados.</h1>
+        <form>
+          <div>
+            <label>Nome</label>
+            <input type="text" placeholder="Marina Silva" />
+          </div>
+          <div>
+            <label>N° Cartão</label>
+            <input type="text" placeholder="XXXX.XXXX.XXXX.XXXX" />
+          </div>
+          <div>
+            <label>CVV</label>
+            <input type="text" placeholder="123" />
+          </div>
+          <div>
+            <label>Data de Validade</label>
+            <input type="text" placeholder="MM/AA" />
+          </div>
+          <div>
+            <label>CPF</label>
+            <input type="text" placeholder="123.123.123-45" />
+          </div>
+          <button type="button" onclick="finish()">Finalizar</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
